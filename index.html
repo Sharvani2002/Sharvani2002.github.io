@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharvani Laxmi Somayaji | GenAI Engineer & Researcher</title>
+    <style>
+        :root {
+            --primary: #2d3e50;
+            --accent: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--bg); }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 20px; background: #fff; border-bottom: 1px solid #eee; }
+        h1 { margin: 0; color: var(--primary); }
+        .subtitle { color: var(--accent); font-weight: 500; margin-top: 10px; }
+        section { margin: 40px 0; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 10px; color: var(--primary); }
+        .item { margin-bottom: 20px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .date { color: #666; font-size: 0.9em; }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #eef2f7; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; color: var(--primary); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .item-header { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sharvani Laxmi Somayaji</h1>
+    <p class="subtitle">Generative AI Engineer | Researcher | CMU Fall '25 (Expected)</p>
+    <p>
+        <a href="mailto:sharvanilaxmisomayaji@gmail.com">Email</a> • 
+        <a href="https://linkedin.com/in/sharvani2002">LinkedIn</a> • 
+        <a href="https://github.com/Sharvani2002">GitHub</a>
+    </p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am a Generative AI Engineer at Goldman Sachs, building autonomous agentic workflows and large-scale data pipelines. My research interests lie at the intersection of <strong>LLM fairness, privacy, and network simulation</strong>. I hold a B.Tech in Electrical & Electronics Engineering from NITK Surathkal (Rank 6/122) and have contributed to open-source projects like ns-3 and VowpalWabbit.</p>
+    </section>
+
+    <section>
+        <h2>Publications & Research</h2>
+        <div class="item">
+            <h3>Linux-like Socket Statistics Utility for ns-3</h3>
+            <p><em>ACM WNS3 '23 (June 2023)</em> | <a href="https://dl.acm.org/doi/10.1145/3592149.3592164">Read Paper</a></p>
+            <ul>
+                <li>Developed a C++ module for the ns-3 simulator to monitor TCP/UDP socket states.</li>
+                <li>Validated fidelity against standard traces with <1% deviation across Cubic, Reno, and BBR variants.</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>A Multi-Layered Adaptive Framework for Evaluating Fairness in LLMs</h3>
+            <p><em>(In Preparation)</em></p>
+            <ul>
+                <li>Surveying bias detection methodologies and privacy vulnerabilities in Foundation Models.</li>
+                <li>Benchmarking GPT-4, Claude 3, and Gemini on intersectional fairness metrics.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <h3>Goldman Sachs | Associate Engineer (GenAI)</h3>
+                <span class="date">Nov '25 - Present</span>
+            </div>
+            <ul>
+                <li>Architecting autonomous workflow assistants using LangGraph and Jira APIs.</li>
+                <li>Developing Agentic AI systems for the Marquee platform.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <h3>Goldman Sachs | Engineering Analyst</h3>
+                <span class="date">July '23 - Nov '25</span>
+            </div>
+            <ul>
+                <li><strong>GenAI Team:</strong> Designed core agentic systems improving answer quality to ~90% accuracy.</li>
+                <li><strong>Compliance Team:</strong> Migrated ETL pipelines from MapReduce to Spark, reducing latency by >50%.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <h3>Microsoft Research (RL Open Source Fest)</h3>
+                <span class="date">Aug '22</span>
+            </div>
+            <ul>
+                <li>Redesigned FlatBuffer schema in C++ for Vowpal Wabbit, reducing parsing instructions by 30% and improving read speeds by 6x.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Projects</h2>
+        <div class="item">
+            <h3>Personal Multimodal AI Agent</h3>
+            <p>Architected a low-latency agent supporting voice, text, and image interaction using Groq LPUs and LangGraph. Engineered a hybrid memory system (Qdrant + SQLite) for long-term semantic recall.</p>
+        </div>
+        <div class="item">
+            <h3>Solar Energy Forecasting (Thesis)</h3>
+            <p>Implemented Multivariate Temporal Fusion Transformers (TFT) for irradiance forecasting. Optimized for Quantile Loss (0.0095) to generate probabilistic prediction intervals.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">LangChain & LangGraph</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Spark & Hadoop</span>
+            <span class="skill-tag">AWS & GCP</span>
+            <span class="skill-tag">ROS (Robot Operating System)</span>
+            <span class="skill-tag">Docker</span>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; padding: 20px; font-size: 0.9em;">
+        &copy; 2025 Sharvani Laxmi Somayaji. Hosted on GitHub Pages.
+    </p>
+</footer>
+
+</body>
+</html>
