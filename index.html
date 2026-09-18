@@ -24,11 +24,44 @@
       padding: 50px 20px;
     }
 
-    header { margin-bottom: 50px; }
+    /* Layout grid for Intro & Photo */
+    .profile-container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 600px) {
+      .profile-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      
+      .profile-text {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      .profile-photo-wrapper {
+        flex-shrink: 0;
+      }
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
     
     h1 {
       font-size: 2.2rem;
       font-weight: 600;
+      margin-top: 0;
       margin-bottom: 0.2em;
       letter-spacing: -0.02em;
     }
@@ -133,34 +166,42 @@
 </head>
 <body>
 
-  <header>
-    <h1>Sharvani Laxmi Somayaji</h1>
-    <div class="contact-links">
-      <a href="mailto:your.email@example.com">Email</a>
-      <a href="https://linkedin.com/in/sharvani2002">LinkedIn</a>
-      <a href="https://github.com/Sharvani2002">GitHub</a>
-      <!-- Add Google Scholar link here when available -->
-      <a href="#">Google Scholar</a> 
+  <div class="profile-container">
+    <!-- Bio Column -->
+    <div class="profile-text">
+      <header>
+        <h1>Sharvani Laxmi Somayaji</h1>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com">Email</a>
+          <a href="https://linkedin.com/in/sharvani2002">LinkedIn</a>
+          <a href="https://github.com/Sharvani2002">GitHub</a>
+          <a href="#">Google Scholar</a> 
+        </div>
+        
+        <p>
+          I am an MSc student in Computing Science at the <a href="https://www.ualberta.ca/">University of Alberta</a> (<a href="https://www.amii.ca/">Amii</a>). I am co-supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~nathanst/">Nathan R. Sturtevant</a> and Prof. <a href="https://mcmachado.github.io/">Marlos C. Machado</a>. 
+        </p>
+        <p>
+          My research primarily focuses on Reinforcement Learning. Prior to beginning my graduate studies, I worked on Generative AI systems (<a href="https://www.goldmansachs.com/insights/goldman-sachs-exchanges/building-ai-systems-for-capital-markets">Marquee AI</a>) for <a href="https://marquee.gs.com/welcome/home">Marquee</a> at <strong>Goldman Sachs</strong> and contributed to <a href="https://vowpalwabbit.org/">Vowpal Wabbit</a> alongside the <a href="https://www.microsoft.com/en-us/research/project/real-world-reinforcement-learning/">Real World RL team</a> at <strong>Microsoft Research NYC</strong>. I hold a BTech in Electrical and Electronics Engineering with a minor in Computer Science from <strong>NITK Surathkal</strong>.
+        </p>
+      </header>
     </div>
-    
-    <p>
-      I am an MSc student in Computing Science at the <a href="https://www.ualberta.ca/">University of Alberta</a> (<a href="https://www.amii.ca/">Amii</a>). I am co-supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~nathanst/">Nathan R. Sturtevant</a> and Prof. <a href="https://mcmachado.github.io/">Marlos C. Machado</a>.
-    </p>
-    <p>
-      My research primarily focuses on Reinforcement Learning. Prior to beginning my graduate studies, I worked on Generative AI systems (<a href="https://www.goldmansachs.com/insights/goldman-sachs-exchanges/building-ai-systems-for-capital-markets">Marquee AI</a>) for <a href="https://marquee.gs.com/welcome/home">Marquee</a> (firm's platform for institutional and corporate clients) at <strong>Goldman Sachs</strong> and contributed to <a href="https://vowpalwabbit.org/">Vowpal Wabbit</a> alongside the <a href="https://www.microsoft.com/en-us/research/project/real-world-reinforcement-learning/">Real World RL team</a> at <strong>Microsoft Research NYC</strong>. I hold a BTech in Electrical and Electronics Engineering with a minor in Computer Science from <strong>NITK Surathkal</strong>.
-    </p>
-  </header>
 
-  <!-- <section id="news">
+    <!-- Photo Column -->
+    <div class="profile-photo-wrapper">
+      <img src="profile-photo.jpg" alt="Sharvani Laxmi Somayaji" class="profile-photo">
+    </div>
+  </div>
+
+  <section id="news">
     <h2>Recent News</h2>
     <ul class="list-container">
       <li><span class="date-badge">[Sep 2026]</span> Started my MSc in Computing Science at the University of Alberta!</li>
-      <li><span class="date-badge">[Jan 2026]</span> Promoted to Associate at Goldman Sachs (Marquee GenAI Solutions).</li>
       <li><span class="date-badge">[Jun 2023]</span> Presented our paper on a Linux-like Socket Statistics Utility for ns-3 at ACM WNS3 '23.</li>
     </ul>
-  </section> -->
+  </section>
 
-  <!-- <section id="publications">
+  <section id="publications">
     <h2>Publications</h2>
     <div class="item-block">
       <h3>Linux-like Socket Statistics Utility for ns-3</h3>
@@ -171,14 +212,34 @@
         <a href="https://github.com/Sharvani2002/ns-3-dev-git">Code</a>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <!-- <!-- Modular section for blogs/notes -->
-  <section id="blog">
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item-block">
+      <h3>University of Alberta - Amii</h3>
+      <div class="item-meta">Research Assistant & Teaching Assistant | Sep 2026 - Present</div>
+      <p>Working on Reinforcement Learning research within the Department of Computing Science.</p>
+    </div>
+    
+    <div class="item-block">
+      <h3>Goldman Sachs</h3>
+      <div class="item-meta">Associate & Analyst (Marquee GenAI Solutions) | Jul 2023 - Jun 2026</div>
+      <p>Developed, evaluated, and scaled Agentic AI systems for the flagship digital platform, Marquee. Previously managed large-scale data engineering and trade surveillance systems.</p>
+    </div>
+
+    <div class="item-block">
+      <h3>Microsoft Research</h3>
+      <div class="item-meta">RLOSF Developer | May 2022 - Aug 2022</div>
+      <p>Collaborated as an independent student developer with the Real World RL team on the Vowpal Wabbit library.</p>
+    </div>
+  </section>
+
+  <!-- Modular section for blogs/notes -->
+  <!-- <section id="blog">
     <h2>Writing & Notes</h2>
     <p><em>Notes, tutorials, and thoughts on Reinforcement Learning and software engineering.</em></p>
     <ul class="list-container">
-      <!-- Add new posts by duplicating the <li> element below -->
       <li>
         <span class="date-badge">[Oct 2026]</span> 
         <a href="./blog/first-post.html">A Primer on Agentic AI Workflows</a>
